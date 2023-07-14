@@ -4,6 +4,7 @@ import SignUpForm from '../user/SignUpForm'
 import React, { useState } from 'react';
 import BookingFormEvents from '../bookings/BookingFormEvents'
 import BookingFormFashion from '../bookings/BookingFormFashion'
+import Homepage from '../homepage/Homepage'
 import {
   useNavigate,
   Routes,
