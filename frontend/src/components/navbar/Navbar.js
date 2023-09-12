@@ -3,12 +3,12 @@ import './Navbar.css'
 const Navbar = () => {
   return (
     <>
-      <nav class="nav-container">
-        <img class="nav-logo" src="/rebecka_logo.png" alt="rebecka slatter logo"></img>
-        <div class="space-between1"></div>
-        <a href="/login">About</a>
-        <a href="/signup">Work</a>
-        <a href="/contact">Contact Me</a>
+      <nav className="nav-container">
+        <a href="/"><img className="nav-logo" src="/rebecka_logo.png" alt="rebecka slatter logo"></img></a>
+        <div className="space-between1"></div>
+        <a className="navigation-link" href="/about">About</a>
+        <a className="navigation-link" href="/work">Work</a>
+        <a className="navigation-link" href="/contacts">Contact</a>
       </nav>
     </>
   )

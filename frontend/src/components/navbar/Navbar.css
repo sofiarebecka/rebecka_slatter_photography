@@ -5,18 +5,18 @@
   flex-direction: row;
   justify-content: space-between;
   max-width: 100%;
-  padding-right: 25px;
+  padding-right: 70px;
   padding-top: 20px;
   padding-left: 15px;
 }
 
-a {
+.navigation-link {
   height: 30px;
   margin-top: 25px;
   font-family: 'century-gothic';
   text-decoration: none;
   src: "https://use.typekit.net/oov2wcw.css";
-  font-size: 25px;
+  font-size: 23px;
   transition: 0.2s ease;
   color: black;
 }
