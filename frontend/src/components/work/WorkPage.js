@@ -6,10 +6,7 @@ const WorkPage = () => {
     <>
       <div className={style["work-page-grid"]}>
         <img src="Ak1.png" alt="work model 1"/>
-        <img src="Amelia1.png" alt="work model 2"/>
         <img src="Duina1.png" alt="work model 3"/>
-        <img src="Amelia2.png" alt="work model 4"/>
-        <img src="Amelia3.png" alt="work model 5"/>
         <img src="Duina2.png" alt="work model 6"/>
         <img src="Duina3.png" alt="work model 7"/>
       </div>
