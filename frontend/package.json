@@ -1,6 +1,7 @@
 {
   "name": "rebecka-slatter",
   "version": "0.1.0",
+  "homepage": "https://rebeckaslatter.com/",
   "private": true,
   "dependencies": {
     "eslint": "^8.23.0",
