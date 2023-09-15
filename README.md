@@ -1,1 +1,1 @@
-[**Rebecka Slatter Photography**](https://rebeckaslatter.com/)
+(https://rebeckaslatter.com/)
