@@ -1,1 +1,1 @@
-[**Rebecka Slatter Website**](https://rebeckaslatter.com/)https://rebeckaslatter.com/
+[**Rebecka Slatter Photography**](https://rebeckaslatter.com/)
