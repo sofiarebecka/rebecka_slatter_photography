@@ -1,1 +1,1 @@
-(https://rebeckaslatter.com/)
+https://rebeckaslatter.com
