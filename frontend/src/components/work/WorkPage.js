@@ -1,4 +1,3 @@
-
 import style from './WorkPage.module.css'
 
 const WorkPage = () => {
