@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 20px 50px 0 15px;
+  position: relative;
+  height: 120px;
+  /* background-color: red; */
+
+  &.show-menu {
+    height: 150px;
+  }
+}
+
+.navigation-link {
+  height: 30px;
+  margin: 25px 40px 0 20px;
+  font-family: 'century-gothic';
+  text-decoration: none;
+  src: "https://use.typekit.net/oov2wcw.css";
+  font-size: 23px;
+  transition: 0.2s ease;
+  color: black;
+}
+
+.nav-logo {
+  width: fit-content;
+  position: absolute;
+  top: 20px;
+}
+
+.space-between1 {
+  width: 45%;
+}
+
+a:hover {
+  color: #cba70a;
+}
+
+.mobile-menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none; /* Initially hidden for larger screens */
+  cursor: pointer;
+  position: absolute;
+  top: 35px; 
+  right: 35px; 
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Media query for smaller screens (mobile) */
+@media (max-width: 768px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    max-width: 100%;
+    height: 80px;
+    padding: 20px; 
+  }
+
+  .nav-logo {
+    width: 250px;
+  }
+
+  .menu-icon {
+    display: block; 
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .navigation-links {
+    display: none;
+  }
+
+  .navigation-link {
+    height: 20px;
+    margin: 10px 0; /* Add margin to create spacing between links */
+    font-size: 18px; /* Adjust the font size for smaller screens */
+    text-align: center;
+  }
+
+  /* Styles for showing the menu when the button is clicked */
+  .show-menu .navigation-links {
+    position: absolute;
+    top: 60px;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 8px 15px;
+    border-radius: 15px;
+  }
+
+  .show-menu .menu-icon .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .show-menu .menu-icon .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .show-menu .menu-icon .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Adjust the positioning of the hamburger menu icon to the right */
+  .show-menu .menu-icon {
+    top: 35px; /* Adjust the top position for spacing from the top */
+    right: 35px; /* Adjust the right position for spacing from the right */
+  }
+}
