@@ -31,10 +31,6 @@ const WorkCentralSection = () => {
     "KRISTIE_711.jpg",
     "DUINA_FEB_1533 copy_.jpg",
     "DUINA_FEB_1600_lighter.jpg",   
-    "glasses_leo2_s.jpg",
-    "glasses_leo2_f.jpg",
-    "glasses_redsquareshade_side.jpg",
-    "glasses_redsquareshade_front.jpg",
     "STYLAND_AW1200222.jpg",
     "STYLAND_AW1200227.jpg",
     "STYLAND_AW1201052D.jpg",
@@ -50,13 +46,19 @@ const WorkCentralSection = () => {
 
   function handleArrowBackClick(event) {
     event.stopPropagation()
-    if (imageToDisplay <= 0) return
+    if (imageToDisplay <= 0) {
+      setImageToDisplay(imageFiles.length - 1)
+      return
+    }
     setImageToDisplay(imageToDisplay - 1)
   }
 
   function handleArrowForwardClick(event) {
     event.stopPropagation()
-    if (imageToDisplay >= imageFiles.length - 1) return
+    if (imageToDisplay >= imageFiles.length - 1) {
+      setImageToDisplay(0)
+      return
+    }
     setImageToDisplay(imageToDisplay + 1)
   }
 

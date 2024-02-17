@@ -57,12 +57,11 @@
   position: absolute;
   top: 10px;
   height: 100%;
-  /* max-width: 600px; */
 }
 
 .arrow-back {
   background-color: transparent;
-  border: 1px solid rgb(137, 137, 137);
+  border: 1px solid white;
   width: 45px;
   height: 45px;
   position: absolute;
@@ -71,11 +70,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
 }
 
 .arrow-back svg {
   display: none;
-  transition: 0.3s ease;
 }
 
 .arrow-forward svg {
@@ -84,6 +84,8 @@
 
 .arrow-back:hover {
   cursor: pointer;
+  opacity: 1;
+
   svg {
     position: absolute;
     display: block;
@@ -94,7 +96,7 @@
 
 .arrow-forward {
   background-color: transparent;
-  border: 1px solid rgb(137, 137, 137);
+  border: 1px solid white;
   width: 45px;
   height: 45px;
   position: absolute;
@@ -103,10 +105,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
 }
 
 .arrow-forward:hover {
   cursor: pointer;
+  opacity: 1;
+
   svg {
     position: absolute;
     display: block;
