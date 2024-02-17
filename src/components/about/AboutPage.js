@@ -22,11 +22,6 @@ const AboutPage = () => {
           <span className={style["about-text"]}>Please don't hesitate to reach out and connect.</span><br/><br/>
           <span className={style["about-text"]}>Rebecka x</span><br/><br/>
         </div>
-        <div className={style["button-container"]}>
-          <Link className={style["contact-button"]} to="/contact">GET IN TOUCH</Link>
-            
-        </div><br/><br/>
-
       </div>
       
   )

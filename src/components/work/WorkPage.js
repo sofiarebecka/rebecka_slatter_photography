@@ -5,7 +5,7 @@ import WorkCentralSection from './WorkCentralSection';
 const WorkPage = () => {
 
   return (
-    <div className={style["body"]}>
+    <div className={style["work-page-container"]}>
       <WorkCentralSection/>
     </div>
   );

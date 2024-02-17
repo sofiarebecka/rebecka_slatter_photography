@@ -18,7 +18,7 @@
   overflow: hidden;
   word-wrap: break-word;
   font-size: 1.3em;
-  animation: typing 1s steps(40, end);
+  animation: typing 2s steps(40, end);
   text-align: center;
   font-family: Futura, sans-serif; /* Specify a fallback font family */
 }

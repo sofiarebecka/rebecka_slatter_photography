@@ -9,19 +9,22 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`nav-container ${showMenu ? 'show-menu' : ''}`}>
-      <Link to="/">
-        <img className="nav-logo" src="/rebecka_logo.png" alt="rebecka slatter logo" />
-      </Link>
-        <div className={`mobile-menu ${showMenu ? 'show-menu' : ''}`}>
-          <div className="menu-icon" onClick={toggleMenu}>
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
+    <>
+      <nav className={`nav-container ${showMenu ? 'show-menu' : ''}`}>
+        <Link to="/">
+          <img className="nav-logo" src="/rebecka_logo.png" alt="rebecka slatter logo" />
+        </Link>
+          <div className={`mobile-menu ${showMenu ? 'show-menu' : ''}`}>
+            <div className="menu-icon" onClick={toggleMenu}>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+            </div>
+            <NavigationLinks showMenu={showMenu}/>
           </div>
-          <NavigationLinks showMenu={showMenu}/>
-        </div>
-    </nav>
+      </nav>
+      <div className={`width-section ${showMenu ? 'show-menu' : ''}`}></div>
+    </>
   );
 }
 
