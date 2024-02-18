@@ -1,5 +1,5 @@
 .work-page-container {
-  width: 100%;
+  width: auto;
   display: flex;
-  height: 100%;
+  height:auto;
 }

@@ -1,22 +1,21 @@
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr)); 
   grid-gap: 20px; 
 }
 
-.image {
-  border: 1px solid #ccc;
-  text-align: center;
-  padding: 10px;
-}
-
-.image img {
-  max-width: 100%;
+.image-grid img {
+  width: 100%;
+  min-width: 150px;
   height: auto;
+  object-fit: contain;
 }
 
 .image-spacing {
   margin: 10px; 
+  width: 100%;
+  height: auto;
 }
 
 .image-size {
@@ -26,22 +25,26 @@
   cursor: pointer;
 }
 
+.image-size:hover {
+  box-shadow: 1px 1px 8px 0.5px rgb(197, 197, 197);
+}
+
 .overlay {
-  color: red;
-  position: fixed;
-  font-size: 40px;
   width: 100%;
   height: 100%;
-  margin-left: auto;
-  margin-right: auto;
   padding-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 40px;
+  position: fixed;
   top: -10px;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: red;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .work-page-carousel-container {
@@ -53,25 +56,36 @@
  align-items: center;
 }
 
-.work-page-carousel-container img {
+.carousel-image-container {
   position: absolute;
   top: 10px;
   height: 100%;
+  background-color: #eee;
+}
+
+.work-page-carousel-container img {
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.work-page-carousel-container img.visible {
+  opacity: 1;
 }
 
 .arrow-back {
-  background-color: transparent;
-  border: 1px solid white;
-  width: 45px;
-  height: 45px;
   position: absolute;
   left: 15%;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 45px;
   opacity: 0.4;
-  transition: opacity 0.2s ease;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: transparent;
 }
 
 .arrow-back svg {

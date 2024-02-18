@@ -4,11 +4,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 50px 0 15px;
+  padding: 10px 50px 0 15px;
   position: fixed;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.6);
   width: 100%;
-  height: 110px;
+  height: 83px;
 
   &.show-menu {
     height: 170px;
@@ -16,24 +16,24 @@
 }
 
 .width-section {
-  height: 130px;
+  height: 90px;
 }
 
 .navigation-link {
-  height: 30px;
+  height: 20px;
   margin: 25px 40px 0 20px;
   src: "https://use.typekit.net/oov2wcw.css";
   font-family: 'century-gothic';
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: black;
   transition: 0.2s ease;
 }
 
 .nav-logo {
-  width: 280px;
+  width: 200px;
   position: absolute;
-  top: 20px;
+  top: 15px;
 }
 
 .space-between1 {

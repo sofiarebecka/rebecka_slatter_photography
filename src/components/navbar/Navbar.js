@@ -12,7 +12,7 @@ const Navbar = () => {
     <>
       <nav className={`nav-container ${showMenu ? 'show-menu' : ''}`}>
         <Link to="/">
-          <img className="nav-logo" src="/rebecka_logo.png" alt="rebecka slatter logo" />
+          <img className="nav-logo" src="/rebecka_logo_transparent.png" alt="rebecka slatter logo" />
         </Link>
           <div className={`mobile-menu ${showMenu ? 'show-menu' : ''}`}>
             <div className="menu-icon" onClick={toggleMenu}>
