@@ -1,11 +1,9 @@
 import style from './AboutPage.module.css'
-import { Link } from 'react-router-dom';
-
 const AboutPage = () => {
   return (
       <div className={style["about-page-main-container"]}>
         <div className={style["typewriter"]}>
-          <span className={style["about-text"]}>I am a London-based photographer who finds joy in the subtle beauty of minimalism.</span><br/>
+          <span className={style["about-text"]}>I am a London based photographer who finds joy in the subtle beauty of minimalism.</span><br/>
           <span className={style["about-text"]}>Maybe my Scandinavian roots have something to do with that?</span><br/><br/>
           <span className={style["about-text"]}>Working alongside a talented team, through my lens I capture a vision turning into reality.</span><br/> 
           <span className={style["about-text"]}>Fashion photography provides me with an opportunity to express myself as an artist.</span><br/> 
@@ -22,8 +20,13 @@ const AboutPage = () => {
           <span className={style["about-text"]}>Please don't hesitate to reach out and connect.</span><br/><br/>
           <span className={style["about-text"]}>Rebecka x</span><br/><br/>
         </div>
-      </div>
-      
+      {/* <div class="button-container">
+        <a href="mailto:rebecka@rebeckaslatter.com" class="contact-button">
+          <img src="email-icon.png" alt="Email" class="email" />
+
+        </a>
+      </div> */}
+    </div>
   )
 }
 export default AboutPage;

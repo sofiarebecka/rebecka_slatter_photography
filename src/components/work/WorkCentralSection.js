@@ -12,14 +12,18 @@ const WorkCentralSection = () => {
     "AMELIA_350.jpg",
     "AMELIA_233.jpg",
     "AMELIA_477.jpg",
+    
     "Duina-1.jpg",
+    "Duina-3.jpg",
     "Duina-2.jpg",   
+    
     "Barbara-1.jpg",
-    "Percelle-2.jpg",
+
     "Rose-1.jpg",
     "Rose-4.jpg",
     "PRM-guy1-2.jpg",
     "PRM-guy1-3.jpg",
+   
     "Shaun-2.jpg",
     "Shaun-1.jpg",
     "Edward-1.jpg",
@@ -32,30 +36,23 @@ const WorkCentralSection = () => {
     "Giorgios-2.jpg",
     "DSC_7646darker.jpg",
     "Lydia-2.jpg",
-    "Maise-1.jpg",
-    "Maise-2.jpg",
+    "Luther-6.jpg",
+    "Luther-7.jpg",
     "Luther-3.jpg",
     "Luther-4.jpg",
+ 
     "Sainte-2.jpg",
     "Sainte-1.jpg",
-    "Sainte-4.jpg",
+   
     "Arturo-1.jpg",
     "Toby-1.jpg",
     "Toby-2.jpg",
-    "Toby-3.jpg",
-    "Arturo-2.jpg",
-    "STYLAND_AW1201052D.jpg",
+       "STYLAND_AW1201052D.jpg",
     "STYLAND_AW1201239.jpg",
     "STYLAND_AW1201417.jpg",
     "STYLAND_AW1201542.jpg",
-  ];
+     ];
   
-  function enableFadeEffect() {
-    setVisible("")
-    setTimeout(() => {
-      setVisible("visible")
-    }, 500);
-  }
 
   function handleImageClick(index) {
     setIsModalOpen(!isModalOpen);

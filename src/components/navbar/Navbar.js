@@ -10,6 +10,7 @@ const Navbar = () => {
 
   return (
     <>
+    
       <nav className={`nav-container ${showMenu ? 'show-menu' : ''}`}>
         <Link to="/">
           <img className="nav-logo" src="/rebecka_logo_transparent.png" alt="rebecka slatter logo" />
@@ -31,16 +32,16 @@ const Navbar = () => {
 const NavigationLinks = ({showMenu}) => {
   return (
     <div className={`navigation-links ${showMenu ? 'show-menu' : ''}`}>
-      <Link className="navigation-link" to="/about">
-        About
-      </Link>
       <Link className="navigation-link" to="/work">
         Work
+      </Link>
+      <Link className="navigation-link" to="/about">
+        About
       </Link>
       <Link className="navigation-link" to="/contact">
         Contact
       </Link>
-    </div>
+         </div>
   )
 }
 
