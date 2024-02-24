@@ -1,4 +1,5 @@
-/* Common styles for all screen sizes */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
 .about-page-main-container {
   padding-top: 0px;
   height: 100%; /* Change this to 100% to take up the full height of the viewport */
@@ -9,15 +10,75 @@
   overflow: hidden;
 }
 
-.typewriter {
-  max-width: 80%; /* Adjust as needed for smaller screens */
-  padding-top: 20px; /* Adjust padding for better spacing on smaller screens */
-  display: inline-block;
+.about-text-container {
+  max-width: 80%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
   overflow: hidden;
-  word-wrap: break-word;
-  font-size: 1.3em;
-  animation: typing 1s steps(40, end);
-  text-align: center;
+  font-size: 18px;
+  width: 0;
+  white-space: nowrap;
+  margin: 10px 0;
+}
+
+.typewriter-text {
+  display: inline-block;
+
+  p {
+    animation: typing 2s steps(40, end) forwards;
+  }
+
+  &:last-of-type {
+    p {
+      animation-duration: 0.5s;
+    }
+  }
+}
+
+.shift-text-left {
+  display: inline-block;
+  animation: slideLeft 1s forwards;
+  opacity: 0;
+  p {
+    width: 100%;
+  }
+}
+
+.shift-text-right {
+  display: inline-block;
+  animation: slideRight 1s forwards;
+  opacity: 0;
+  p {
+    width: 100%;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes typing {
@@ -29,62 +90,18 @@
   }
 }
 
-.about-text {
-  font-size: 16px;
-}
-
-.arrow-back {
-  font-size: 70px;
-  text-decoration: none;
-  color: black;
-}
-
-.contact-button {
-  text-decoration: none;
-  text-align: center;
-  border: 0.5px solid black;
-  color: black;
-  font-family: 'Futura PT', sans-serif; /* Use Futura PT font */
-  font-size: 16px;
-  font-weight: 700;
-  transition: 0.2s ease;
-  width: 40px; /* Adjust button width as needed */
-  height: 50px; /* Adjust button height as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 2rem;
-  box-shadow: 3px 5px 8px black;
-}
-
-.contact-button:hover {
-  color: #cba70a;
-}
-
-.button-container {
-  margin-top: 12.5px;
-  width: 100%; /* Adjust container width as needed */
-  display: flex;
-  justify-content: center;
-}
-
-.email {
-  width: 20px; /* Adjust the width as needed */
-  height: 20px; /* Adjust the height as needed */
-}
-
-/* Styles for screens with a maximum width of 768px (typical mobile screens) */
 @media (max-width: 768px) {
-  .typewriter {
+
+  .about-text-container {
     max-width: 100%;
-    padding: 20px; /* Adjust padding for better spacing on smaller screens */
-    font-size: 1em; /* Adjust font size for smaller screens */
-    white-space: normal; /* Allow text to wrap on smaller screens */
+    padding: 20px; 
+    white-space: normal; 
   }
 
-  .about-text {
-    font-size: 14px; /* Adjust font size for smaller screens */
+  p {
+    margin: 10px 0;
+    width: 0;
+    font-size: 0.55rem; 
+    font-weight: 500;
   }
-
-  /* Adjust other styles as needed for smaller screens */
 }
