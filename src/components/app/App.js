@@ -17,7 +17,7 @@ const App = () => {
       <>
         <Navbar />
         <HashRouter>
-          <Route path='/' element={<Homepage navigate={useNavigate() }/>}/>
+          <Route path='/#/' element={<Homepage navigate={useNavigate() }/>}/>
           <Route path='/#/about' element={<AboutPage navigate={useNavigate() }/>}/>
           <Route path='/#/work' element={<WorkPage navigate={useNavigate() }/>}/>
           <Route path='/#/contact' element={<Contacts navigate={useNavigate() }/>}/>
