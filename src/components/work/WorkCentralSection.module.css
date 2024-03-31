@@ -1,19 +1,29 @@
 .image-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr)); 
-  grid-gap: 20px; 
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  grid-gap: 21px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-right: 39px;
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); /* Adjusted for smaller screens */
+    grid-gap: 10px; /* Reduced grid gap for better spacing on smaller screens */
+  }
 }
 
 .image-grid img {
   width: 100%;
-  min-width: 150px;
   height: auto;
   object-fit: contain;
+  max-width: 100%; /* Added to prevent image overflow */
 }
 
 .image-spacing {
-  margin: 10px; 
+  margin: -2.25px 19px; 
   width: 100%;
   height: auto;
 }
@@ -67,10 +77,13 @@
   height: 100%;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  width: auto;
 }
 
 .work-page-carousel-container img.visible {
   opacity: 1;
+  background-color: transparent;
+  width: auto;
 }
 
 .arrow-back {

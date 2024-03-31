@@ -1,6 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Futura+PT:wght@300&display=swap');
 
 .nav-container {
+  .nav-container {
+    /* Your existing styles */
+  }
+  
+  .nav-logo {
+    margin-right: 20px; /* Adjust as needed */
+  }
+  
+  .nav-logo img {
+    width: 30px; /* Adjust as needed */
+  }
+  
+  .navigation-links {
+    /* Your existing styles */
+  }
+  
+  .navigation-link {
+    /* Your existing styles */
+  }
+  
+  .mobile-menu {
+    /* Your existing styles */
+  }
+  font-family: 'Futura PT', sans-serif;
+font-style: normal;
+font-weight: 300;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,16 +41,25 @@
     height: 170px;
   }
 }
+/* Adjust text size */
+.about-text {
+  font-size: 12px; /* Decrease the font size */
+  font-family: 'Futura PT', sans-serif;
+font-style: normal;
+font-weight: 300;
+}
 
 .width-section {
-  height: 90px;
+  height: 95px;
 }
 
 .navigation-link {
   height: 20px;
-  margin: 25px 40px 0 20px;
-  src: "https://use.typekit.net/oov2wcw.css";
-  font-family: 'century-gothic';
+  margin: 25px 50px 0 10px;
+  color: black;
+  font-family: 'Futura PT', sans-serif;
+  font-style: normal;
+  font-weight: 300;
   text-decoration: none;
   font-size: 20px;
   color: black;
@@ -90,9 +126,12 @@ a:hover {
 
   .navigation-link {
     height: 20px;
-    margin: 10px 0;
-    font-size: 19px;
+    margin: 12px 0;
+    font-size: 17px;
     text-align: center;
+    font-family: 'Futura PT', sans-serif;
+font-style: normal;
+font-weight: 300;
   }
 
   .show-menu {
@@ -127,7 +166,7 @@ a:hover {
   .width-section {
     height: 100px;
     &.show-menu {
-      height: 200px;
+      height: 220px;
     }
   }
 }
