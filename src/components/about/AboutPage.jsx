@@ -1,9 +1,10 @@
+import React from 'react'
 import style from './AboutPage.module.css'
 
 const AboutPage = () => {
   return (
     <div className={style["about-page-main-container"]}>
-      <div className={style["about-text-container"]}>
+      <div className={style["about-text-container"]} data-testid="text-container" >
         <div className={style["typewriter-text"]}><p style={{animationDelay: "0"}}>I am a London based photographer who finds joy in the subtle beauty of minimalism.</p></div>
         <div className={style["typewriter-text"]}><p style={{animationDelay: "2s"}}>Maybe my Scandinavian roots have something to do with that?</p></div><br/>
         <div className={style["shift-text-right"]} style={{animationDelay: "5s"}}><p>Working alongside a talented team, through my lens I capture a vision turning into reality.</p></div> 

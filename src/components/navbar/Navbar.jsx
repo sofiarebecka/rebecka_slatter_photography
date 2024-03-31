@@ -1,6 +1,7 @@
 import './Navbar.css'
-import { React, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -10,7 +11,6 @@ const Navbar = () => {
 
   return (
     <>
-    
       <nav className={`nav-container ${showMenu ? 'show-menu' : ''}`}>
         <Link to="/">
           <img className="nav-logo" src="/rebecka_logo_transparent.png" alt="rebecka slatter logo" />
@@ -41,7 +41,7 @@ const NavigationLinks = ({showMenu}) => {
       <Link className="navigation-link" to="/contact">
         Contact
       </Link>
-         </div>
+    </div>
   )
 }
 

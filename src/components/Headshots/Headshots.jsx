@@ -1,7 +1,8 @@
-import style from "./WorkCentralSection.module.css";
+import React from 'react'
+import style from "./Headshots.module.css";
 import { useState } from "react";
 
-const WorkCentralSection = () => {
+const Headshots = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [imageToDisplay, setImageToDisplay] = useState(null);
@@ -136,4 +137,4 @@ const WorkCentralSection = () => {
   )
 }
 
-export default WorkCentralSection;
+export default Headshots;

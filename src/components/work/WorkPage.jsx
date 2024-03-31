@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './WorkPage.module.css';
-import WorkCentralSection from './WorkCentralSection';
+import WorkCentralSection from './WorkCentralSection.jsx';
 
 const WorkPage = () => {
 
