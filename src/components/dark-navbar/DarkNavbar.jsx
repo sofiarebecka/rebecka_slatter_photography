@@ -15,7 +15,7 @@ const DarkNavbar = () => {
         <Link to="/">
           <img className={style["nav-logo"]} src="/rebecka_logo_inverted.png" alt="rebecka slatter logo" />
         </Link>
-        <h1>Headshots</h1>
+        <h1>HEADSHOTS</h1>
           <div className={`${style['mobile-menu']} ${showMenu? style['show-menu'] : ""}`} >
             <div className={style["menu-icon"]} onClick={toggleMenu}>
               <div className={style["bar"]}></div>
