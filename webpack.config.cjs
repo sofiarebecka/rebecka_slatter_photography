@@ -1,10 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.jsx"),
   output: {
-    path:path.resolve(__dirname, "dist"),
+    path: path.join(__dirname, "build"),
+    filename: 'index.bundle.js',
   },
   module: {
     rules: [
@@ -12,7 +15,7 @@ module.exports = {
         test: /\.(js|jsx|cjs)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: "babel-loader", 
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
@@ -20,22 +23,35 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|jp(e*)g|svg|gif)$/,
-        use: ['file-loader'],
+        test: /\.(png|jp(e*)g|svg|jpg|ico)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'public'
+          }
+        }
       },
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "public", "index.html"),
-      publicPath: "/",
+    }),
+    new MiniCssExtractPlugin(), 
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public', to: 'public' } // Copy all files from public to public folder in build
+      ]
     }),
   ],
   mode: "development",
   devServer: {
     historyApiFallback: true,
+    port: 3000,
+    watchContentBase: true
   },
 }
