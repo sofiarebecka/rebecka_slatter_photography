@@ -18,7 +18,7 @@ const App = () => {
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
-    if (document.URL.includes("headshots")) {
+    if (document.URL.includes("headshots") || document.URL === 'https://rebeckaslatter.com/headshots') {
       setTheme("dark")
     } else {
       setTheme("light")
