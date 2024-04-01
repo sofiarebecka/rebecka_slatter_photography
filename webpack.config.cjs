@@ -31,20 +31,23 @@ module.exports = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'public'
+            outputPath: ''
           }
         }
       },
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "public", "index.html"),
-    }),
     new MiniCssExtractPlugin(), 
     new CopyWebpackPlugin({
       patterns: [
-        { from: 'public', to: 'public' } // Copy all files from public to public folder in build
+        { 
+          from: 'public', 
+          to: '',
+          globOptions: {
+            ignore: ['index.html']
+          }, 
+        }
       ]
     }),
   ],
