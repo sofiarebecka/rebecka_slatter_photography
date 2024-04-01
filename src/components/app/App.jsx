@@ -10,15 +10,16 @@ import {
   useNavigate,
   Routes,
   Route,
+  useLocation,
 } from "react-router-dom";
 
 
 const App = () => {
-
+  const location = useLocation();
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
-    if (document.URL.includes("headshots") || document.URL === 'https://rebeckaslatter.com/headshots') {
+    if (location.pathname == "/headshots") {
       setTheme("dark")
     } else {
       setTheme("light")
