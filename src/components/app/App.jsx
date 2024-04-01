@@ -18,7 +18,7 @@ const App = () => {
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
-    if (document.URL === "http://localhost:8080/headshots") {
+    if (document.URL.includes("headshots")) {
       setTheme("dark")
     } else {
       setTheme("light")
