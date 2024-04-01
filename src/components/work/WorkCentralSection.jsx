@@ -1,6 +1,6 @@
 import React from 'react'
 import style from "./WorkCentralSection.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const WorkCentralSection = () => {
 
@@ -9,10 +9,10 @@ const WorkCentralSection = () => {
   const [visible, setVisible] = useState('visible');
 
   const imageFiles = [
-    "AMELIA_286.jpg",
-    "AMELIA_350.jpg",
-    "AMELIA_233.jpg",
-    "AMELIA_477.jpg",
+    "Amelia-1.jpg",
+    "Amelia-2.jpg",
+    "Amelia-3.jpg",
+    "Amelia-4.jpg",
     
     "Duina-1.jpg",
     "Duina-3.jpg",
@@ -21,22 +21,22 @@ const WorkCentralSection = () => {
 
     "Rose-1.jpg",
     "Rose-4.jpg",
+    "PRM-guy1-1.jpg",
     "PRM-guy1-2.jpg",
-    "PRM-guy1-3.jpg",
    
     "Shaun-2.jpg",
     "Shaun-1.jpg",
     "Edward-1.jpg",
     "Edward-5.jpg",
 
-    "Stephen-Sanchez-2.jpg",
-    "Stephen_Sanchez_19_146a30488795a0a62e41f68340c5291f.jpg",
-    "Stephen_Sanchez_24_146a30488795a0a62e41f68340c5291f.jpg",
-    "DSC_0973-Edit.jpg",
+    "Sanchez-2.jpg",
+    "Sanchez-3.jpg",
+    "Sanchez-4.jpg",
+    "Sanchez-5.jpg",
 
     "Giorgios-1.jpg",
     "Giorgios-2.jpg",
-    "DSC_7646darker.jpg",
+    "Lydia-3.jpg",
     "Lydia-2.jpg",
 
     "Luther-6.jpg",
@@ -49,10 +49,10 @@ const WorkCentralSection = () => {
     "Arturo-1.jpg",
     "Toby-1.jpg",
 
-    "STYLAND_AW1201052D.jpg",
-    "STYLAND_AW1201239.jpg",
-    "STYLAND_AW1201417.jpg",
-    "STYLAND_AW1201542.jpg",
+    "Styland-1.jpg",
+    "Styland-2.jpg",
+    "Styland-3.jpg",
+    "Styland-4.jpg",
   ];
   
 
@@ -62,6 +62,7 @@ const WorkCentralSection = () => {
   }
 
   function handleArrowBackClick(event) {
+    console.log(event)
     event.stopPropagation()
     if (imageToDisplay <= 0) {
       setVisible("")
@@ -79,6 +80,7 @@ const WorkCentralSection = () => {
   }
 
   function handleArrowForwardClick(event) {
+    console.log(event)
     event.stopPropagation()
     if (imageToDisplay >= imageFiles.length - 1) {
       setVisible("")
@@ -95,39 +97,102 @@ const WorkCentralSection = () => {
     }, 400);
   }
 
+  function handleKeyDown(event) {
+    switch (event.key) {
+      case 'ArrowLeft':
+        event.stopPropagation()
+        handleArrowBackClick(event);
+        break;
+      case 'ArrowRight':
+        event.stopPropagation()
+        handleArrowForwardClick(event);
+        break;
+      default:
+        break;
+    }
+  };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isModalOpen, imageToDisplay]);
+
   return (
     <div className={style["image-grid"]}>
       {imageFiles.map((fileName, index) => (
-        <div key={index} className={`img ${style["image-spacing"]}`} onClick={() => handleImageClick(index)}>
+        <div 
+          key={index} 
+          className={style["image-spacing"]} 
+          onClick={() => handleImageClick(index)}
+        >
           <img
             src={fileName}
             alt={`Img ${index + 1}`}
             className={style["image-size"]}
+            loading="eager"
           />
         </div>
       ))}
       {isModalOpen &&
-        <div className={style['overlay']} onClick={() => handleImageClick()}>
+        <div 
+          className={style['overlay']} 
+          onClick={() => handleImageClick()}>
           <div className={style['work-page-carousel-container']}>
             <div className={style['carousel-image-container']}>
-              <img id="carousel-image" className={style[visible]} src={imageFiles[imageToDisplay]} alt={imageFiles[imageToDisplay]}></img>
+              <img 
+                id="carousel-image" 
+                className={style[visible]} 
+                src={imageFiles[imageToDisplay]} 
+                alt={imageFiles[imageToDisplay]}
+              />
             </div>
-            <button className={style['arrow-back']} onClick={(event) => handleArrowBackClick(event)}>
-              <svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 330 330">
-                <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
-                c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
-                C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
-                C255,161.018,253.42,157.202,250.606,154.389z"/>
+            <button 
+              className={style['arrow-back']} 
+              onClick={(event) => handleArrowBackClick(event)}
+            >
+              <svg 
+                fill="#ffffff" 
+                height="25px" 
+                width="25px" 
+                version="1.1" 
+                id="Layer_1" 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 330 330"
+              >
+                <path 
+                  id="XMLID_222_" 
+                  d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+                  c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+                  C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+                  C255,161.018,253.42,157.202,250.606,154.389z"
+                />
               </svg>
             </button>
-            <button className={style['arrow-forward']} onClick={(event) => handleArrowForwardClick(event)}>
-              <svg fill="#ffffff" height="25px" width="25px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 330 330">
-                <path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
-                c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
-                C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
-                C255,161.018,253.42,157.202,250.606,154.389z"/>
+            <button 
+              className={style['arrow-forward']} 
+              onClick={(event) => handleArrowForwardClick(event)}
+            >
+              <svg 
+                fill="#ffffff" 
+                height="25px" 
+                width="25px" 
+                version="1.1" 
+                id="Layer_1" 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 330 330"
+              >
+                <path 
+                  id="XMLID_222_" 
+                  d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001
+                  c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213
+                  C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606
+                  C255,161.018,253.42,157.202,250.606,154.389z"
+                />
               </svg>
             </button>
           </div>
