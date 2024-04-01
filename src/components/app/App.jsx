@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Homepage from '../homepage/Homepage.jsx'
 import AboutPage from '../about/AboutPage.jsx';
 import WorkPage from '../work/WorkPage.jsx';
-import LightNavbar from '../light-navbar/LightNavbar.jsx';
-import DarkNavbar from '../dark-navbar/DarkNavbar.jsx';
+import Navbar from '../navbar/Navbar.jsx';
 import Contacts from '../contacts/Contacts.jsx';
 import Headshots from '../headshots/Headshots.jsx';
 import {
@@ -19,6 +18,7 @@ const App = () => {
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
+    console.log("before theme: ", theme)
     if (location.pathname == "/headshots") {
       setTheme("dark")
     } else {
@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <>
-      {theme === "light"? <LightNavbar /> : <DarkNavbar/>}
+      <Navbar theme={theme} />
       <Routes>
         <Route path='/' element={<Homepage navigate={useNavigate() }/>}/>
         <Route path='/about' element={<AboutPage navigate={useNavigate() }/>}/>
