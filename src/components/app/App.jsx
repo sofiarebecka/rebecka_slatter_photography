@@ -18,13 +18,12 @@ const App = () => {
   const [theme, setTheme] = useState("light")
 
   useEffect(() => {
-    console.log("before theme: ", theme)
     if (location.pathname == "/headshots") {
       setTheme("dark")
     } else {
       setTheme("light")
     }
-  }, [document.URL])
+  }, [location.pathname])
 
   return (
     <>
