@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 
 const App = () => {
+
   const location = useLocation();
   const [theme, setTheme] = useState("light")
 
@@ -23,10 +24,6 @@ const App = () => {
       setTheme("light")
     }
   }, [location.pathname])
-
-  useEffect(() => {
-    console.log("theme changing to ", theme);
-  }, [theme]);
 
   return (
     <>
