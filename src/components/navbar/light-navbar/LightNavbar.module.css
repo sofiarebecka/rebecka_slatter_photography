@@ -114,6 +114,7 @@ a:hover {
 
   .navigation-links {
     display: none;
+    margin-right: 0;
   }
 
   .navigation-link {
@@ -121,20 +122,24 @@ a:hover {
     margin: 12px 0;
     font-size: 17px;
     text-align: center;
-    font-family: 'Futura PT', sans-serif;
     font-style: normal;
     font-weight: 300;
   }
 
   .show-menu {
+    &.nav-container {
+      height: 180px;
+    }
+
     &.navigation-links {
       display: flex;
       flex-direction: column;
       position: absolute;
       top: 75px;
-      right: 70px;
+      right: 75px;
       margin-top: 5px;
       border-radius: 15px;
+      gap: 0;
     }
 
     .menu-icon {
@@ -158,7 +163,7 @@ a:hover {
   .width-section {
     height: 100px;
     &.show-menu {
-      height: 220px;
+      height: 223px;
     }
   }
 }
