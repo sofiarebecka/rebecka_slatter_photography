@@ -82,8 +82,12 @@ h1 {
 
   h1 {
     position: absolute;
-    top: 85px;
-    left: -132px;
+    top: -50px;
+    left: 38px;
     font-size: 25px;
+  }
+
+  .masonry-container {
+    margin-top: 220px;
   }
 }
