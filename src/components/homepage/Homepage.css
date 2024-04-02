@@ -14,7 +14,7 @@
 
 .image-loop img {
   position: absolute;
-  max-height: 620px;
+  width: 70%;
   border-radius: 0.2em;
   top: 0;
   left: 50%;
