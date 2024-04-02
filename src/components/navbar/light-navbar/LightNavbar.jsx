@@ -39,7 +39,7 @@ const NavigationLinks = ({showMenu}) => {
         About
       </Link>
       <Link className={style["navigation-link"]} to="/contact">
-        Contacts
+        Contact
       </Link>
     </div>
   )

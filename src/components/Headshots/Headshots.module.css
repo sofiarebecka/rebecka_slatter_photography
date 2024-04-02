@@ -19,7 +19,7 @@
 
 h1 {
   font-family: "Comfortaa";
-  font-size: 90px;
+  font-size: 120px;
   color: white;
   text-align: center;
   animation: glowing 10s infinite;
@@ -39,6 +39,8 @@ h1 {
   flex-direction: row;
   margin-bottom: 100px;
   justify-content: center;
+  gap: 10px;
+  margin-top: 45px;
 }
 
 .masonry-column {
@@ -63,10 +65,9 @@ h1 {
 }
 
 .masonry-image {
-  background-color: rgb(116, 116, 116);
-  border: 10px solid green;
-  width: 95%;
-  height: 350px;
+  width: 100%;
+  border: 5px solid black;
+  height: auto;
 }
 
 .headshot-collection {

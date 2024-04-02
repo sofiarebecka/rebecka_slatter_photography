@@ -32,7 +32,6 @@
   font-family: 'Futura PT', sans-serif;
   font-style: normal;
   font-weight: 300;
-
 }
 
 .width-section {
@@ -41,7 +40,7 @@
 
 .navigation-link {
   height: 20px;
-  margin: 25px 50px 0 10px;
+  margin: auto;
   color: black;
   font-family: 'Alata', sans-serif;
   font-style: normal;
@@ -49,6 +48,14 @@
   text-decoration: none;
   font-size: 20px;
   transition: 0.2s ease;
+}
+
+.navigation-links {
+  margin-right: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .nav-logo {
