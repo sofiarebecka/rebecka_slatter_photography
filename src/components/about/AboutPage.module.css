@@ -2,7 +2,7 @@
 
 .about-page-main-container {
   padding-top: 0px;
-  height: 100%; /* Change this to 100% to take up the full height of the viewport */
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -21,10 +21,13 @@
 
 p {
   overflow: hidden;
-  font-size: 18px;
+  font-size: 13px;
   width: 0;
+  line-height: 1.3em;
   white-space: nowrap;
   margin: 10px 0;
+  font-family: 'Alata';
+  font-weight: 200;
 }
 
 .typewriter-text {

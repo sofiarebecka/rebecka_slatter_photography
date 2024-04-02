@@ -13,7 +13,7 @@ const LightNavbar = () => {
     <>
       <nav className={`${style["nav-container"]} ${showMenu ? style['show-menu'] : ''}`}>
         <Link to="/">
-          <img className={style["nav-logo"]} src="/rebecka_logo_transparent.png" alt="rebecka slatter logo" />
+          <img className={style["nav-logo"]} src="logos/rebecka_logo.png" alt="rebecka slatter logo" />
         </Link>
           <div className={`${style["mobile-menu"]} ${showMenu ? style['show-menu'] : ''}`}>
             <div className={style["menu-icon"]} onClick={toggleMenu}>
@@ -39,7 +39,7 @@ const NavigationLinks = ({showMenu}) => {
         About
       </Link>
       <Link className={style["navigation-link"]} to="/contact">
-        Contact
+        Contacts
       </Link>
     </div>
   )

@@ -132,7 +132,7 @@ const WorkPage = () => {
             onClick={() => handleImageClick(index)}
           >
             <img
-              src={fileName}
+              src={`workpage-images/${fileName}`}
               alt={`Img ${index + 1}`}
               className={style["image-size"]}
               loading="eager"
@@ -148,7 +148,7 @@ const WorkPage = () => {
                 <img 
                   id="carousel-image" 
                   className={style[visible]} 
-                  src={imageFiles[imageToDisplay]} 
+                  src={`workpage-images/${imageFiles[imageToDisplay]}`} 
                   alt={imageFiles[imageToDisplay]}
                 />
               </div>
