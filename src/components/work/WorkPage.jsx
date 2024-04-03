@@ -107,6 +107,9 @@ const WorkPage = () => {
         event.stopPropagation()
         handleArrowForwardClick(event);
         break;
+      case 'Escape':
+        // event.stopPropagation();
+        setIsModalOpen(!isModalOpen)
       default:
         break;
     }

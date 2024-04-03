@@ -21,3 +21,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=League+Script&family=Oooh+Baby&display=swap');
+
+@font-face {
+  font-family: 'Futura PT Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura PT Book'), url('../public/fonts/FuturaCyrillicBook.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Alata-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Alata'), url('../public/fonts/Alata-Regular.ttf') format('ttf');
+}

@@ -1,5 +1,5 @@
 import style from './DarkNavbar.module.css'
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const DarkNavbar = ({showMenu, setShowMenu}) => {
@@ -32,6 +32,9 @@ const DarkNavbar = ({showMenu, setShowMenu}) => {
 const NavigationLinks = ({showMenu}) => {
   return (
     <div className={`${style["navigation-links"]} ${showMenu ? style['show-menu'] : ''}`}>
+      <a className={style["navigation-link"]} to='#'>
+        Pricing
+      </a>
       <a className={style["navigation-link"]} href="https://www.instagram.com/rebeckaslatter/?hl=en">
         <img style={{width: 29}} src="logos/instagram_icon_white.png" alt="instagram logo white" />
       </a>

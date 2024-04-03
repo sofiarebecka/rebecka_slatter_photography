@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Futura+PT:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-
 .nav-container {
-  font-family: 'Futura PT', sans-serif;
   font-style: normal;
   font-weight: 300;
   display: flex;
@@ -35,6 +31,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Futura PT Book', sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  transition: 0.2s ease;
+  &:hover {
+    cursor: pointer;
+    color: #cba70a;
+  }
 }
 
 .nav-logo {
@@ -65,7 +70,7 @@
 }
 
 .navigation-links {
-  margin-right: 100px;
+  margin-right: 170px;
   width: fit-content;
   display: flex;
   flex-direction: row;
@@ -105,19 +110,18 @@
     display: none;
   }
 
-  .navigation-link {
+  .navigation-link{
     height: 20px;
     margin: 18px 0;
     font-size: 17px;
     text-align: center;
-    font-family: 'Futura PT', sans-serif;
     font-style: normal;
     font-weight: 300;
   }
 
   .show-menu {
     &.nav-container {
-      height: 220px;
+      height: 270px;
     }
 
     &.navigation-links {
@@ -125,7 +129,7 @@
       flex-direction: column;
       position: absolute;
       top: 75px;
-      right: -14px;
+      right: -87px;
       margin-top: 5px;
       border-radius: 15px;
     }
