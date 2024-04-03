@@ -5,7 +5,14 @@
   font-family: 'Futura PT Medium';
   font-style: normal;
   font-weight: normal;
-  src: local('Futura PT Medium'), url('../../../../public/FuturaCyrillicDemi.woff') format('woff');
+  src: local('Futura PT Medium'), url('../../../../public/fonts/FuturaCyrillicDemi.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Alata-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Alata'), url('../../../../public/fonts/Alata-Regular.ttf') format('ttf');
 }
 
 .nav-container {  
@@ -34,13 +41,6 @@
   }
 }
 
-.about-text {
-  font-size: 12px; 
-  font-family: 'Futura PT', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-}
-
 .width-section {
   height: 95px;
 }
@@ -49,7 +49,7 @@
   height: 20px;
   margin: auto;
   color: black;
-  font-family: 'Futura PT Medium', sans-serif;
+  font-family: 'Futura PT Medium', 'Alata';
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
