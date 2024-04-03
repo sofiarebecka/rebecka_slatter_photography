@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=League+Script&family=Oooh+Baby&display=swap');
 
 @font-face {
   font-family: 'Futura PT Book';
@@ -15,7 +15,7 @@
 }
 
 .about-page-main-container {
-  padding-top: 0px;
+  padding-top: 20px;
   height: 100%;
   width: 100%;
   display: flex;
@@ -46,69 +46,50 @@ p {
 
 .typewriter-text {
   display: inline-block;
-
-  p {
-    animation: typing 2s steps(40, end) forwards;
-  }
-
-  &:last-of-type {
-    p {
-      animation-duration: 0.5s;
-    }
-  }
+  font-family: 'Futura PT Book';
 }
 
-.shift-text-left {
-  display: inline-block;
-  animation: slideLeft 1s forwards;
-  opacity: 0;
-  p {
-    width: 100%;
-  }
+.typewriter-text p {
+  animation: typing 2s linear forwards;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.shift-text-right {
-  display: inline-block;
-  animation: slideRight 1s forwards;
-  opacity: 0;
-  p {
-    width: 100%;
-  }
-}
-
-@keyframes slideLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.typewriter-text:last-of-type p {
+  animation-duration: 0.5s;
 }
 
 @keyframes typing {
-  from {
+  0% {
     width: 0;
   }
-  to {
+  100% {
     width: 100%;
+  }
+}
+
+.shift-text-up {
+  opacity: 0;
+  animation: slideUp 1s forwards;
+}
+
+.shift-text-up p {
+  text-align: center;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @media (max-width: 768px) {
-
   .about-text-container {
     max-width: 100%;
     padding: 20px; 
@@ -116,8 +97,9 @@ p {
   }
 
   p {
-    width: 0;
-    font-size: 90%;
+    margin: 10px 0;
+    width: auto;
+    font-size: 14px;
     font-weight: 500;
     margin: 2.5% 0;
   }
@@ -126,19 +108,23 @@ p {
 
 @media (max-width: 510px) {
   p {
-    font-size: 80%;
+    font-size: 12px;
   }
 }
-
+@media (max-width: 768px) {
+  .rebecka-text {
+    font-weight: 400;
+  }
+}
 @media (max-width: 455px) {
   p {
-    font-size: 70%;
+    font-size: 10px;
   }
 }
 
 @media (max-width: 400px) {
   p {
-    font-size: 60%;
+    font-size: 8px;
     font-weight: 600;
   }
 }
