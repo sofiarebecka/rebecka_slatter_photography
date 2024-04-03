@@ -39,7 +39,7 @@
   flex-direction: row;
   margin-bottom: 100px;
   justify-content: center;
-  gap: 2%;
+  gap: 0.3%;
   margin-top: 0px;
 }
 
@@ -66,7 +66,7 @@
 
 .masonry-image {
   width: 100%;
-  margin: 3% 0;
+  margin: 0.1% 0;
   height: auto;
 }
 
