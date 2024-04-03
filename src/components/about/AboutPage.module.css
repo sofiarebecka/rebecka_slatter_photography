@@ -4,7 +4,14 @@
   font-family: 'Futura PT Book';
   font-style: normal;
   font-weight: normal;
-  src: local('Futura PT Book'), url('../../../public/FuturaCyrillicBook.woff') format('woff');
+  src: local('Futura PT Book'), url('../../../public/fonts/FuturaCyrillicBook.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Alata-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Alata'), url('../../../public/fonts/Alata-Regular.ttf') format('ttf');
 }
 
 .about-page-main-container {
@@ -30,10 +37,10 @@ p {
   overflow: hidden;
   font-size: 100%;
   width: 0;
-  line-height: 1.12em;
+  line-height: 1.3em;
   white-space: nowrap;
-  margin: 2.5% 0;
-  font-family: 'Futura PT Book';
+  margin: 2% 0;
+  font-family: 'Futura PT Book', 'Alata';
   font-weight: 200;
 }
 
@@ -112,6 +119,7 @@ p {
     width: 0;
     font-size: 90%;
     font-weight: 500;
+    margin: 2.5% 0;
   }
 }
 
