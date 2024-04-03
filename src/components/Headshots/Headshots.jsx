@@ -1,11 +1,11 @@
 import style from './Headshots.module.css';
 import React from 'react'
 
-const Headshots = () => {
+const Headshots = ({showMenu}) => {
   return (
     <div className={style["page-container"]}>
       <h1 className={style["headshots-title"]}>HEADSHOTS</h1>
-      <div className={style["masonry-container"]}>
+      <div className={`${style["masonry-container"]} ${showMenu? style["show-menu"] : ""}`}>
         <div className={style["masonry-column"]}>
           <img className={style["masonry-image"]} src="headshots-images/Philip-1.jpg" />
           <img className={style["masonry-image"]} src="headshots-images/Alice-1.jpg" />

@@ -2,8 +2,7 @@ import style from './DarkNavbar.module.css'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const DarkNavbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+const DarkNavbar = ({showMenu, setShowMenu}) => {
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -12,7 +11,7 @@ const DarkNavbar = () => {
   return (
     <>
       <nav className={`${style["nav-container"]} ${showMenu ? style['show-menu'] : ''}`}>
-        <Link to="/">
+        <Link to="/headshots">
           <img className={style["nav-logo"]} src="logos/rebecka_logo_white.png" alt="rebecka slatter logo" />
         </Link>
         <h1 className={style["navbar-title"]}>HEADSHOTS</h1>

@@ -15,7 +15,8 @@ import {
 const App = () => {
 
   const location = useLocation();
-  const [theme, setTheme] = useState("light")
+  const [theme, setTheme] = useState("light");
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     if (location.pathname == "/headshots") {
@@ -27,13 +28,13 @@ const App = () => {
 
   return (
     <>
-      <Navbar theme={theme} />
+      <Navbar theme={theme} showMenu={showMenu} setShowMenu={setShowMenu} />
       <Routes>
         <Route path='/' element={<Homepage navigate={useNavigate() }/>}/>
         <Route path='/about' element={<AboutPage navigate={useNavigate() }/>}/>
         <Route path='/work' element={<WorkPage navigate={useNavigate() }/>}/>
         <Route path='/contact' element={<Contacts navigate={useNavigate() }/>}/>
-        <Route path='/headshots' element={<Headshots navigate={useNavigate() }/>}/>
+        <Route path='/headshots' element={<Headshots navigate={useNavigate() } showMenu={showMenu}/>}/>
       </Routes>
     </>
   );

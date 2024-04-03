@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+@font-face {
+  font-family: 'Futura PT Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura PT Book'), url('../../../public/FuturaCyrillicBook.woff') format('woff');
+}
+
 .about-page-main-container {
   padding-top: 0px;
   height: 100%;
@@ -21,12 +28,12 @@
 
 p {
   overflow: hidden;
-  font-size: 13px;
+  font-size: 100%;
   width: 0;
-  line-height: 1.3em;
+  line-height: 1.12em;
   white-space: nowrap;
-  margin: 10px 0;
-  font-family: 'Alata';
+  margin: 2.5% 0;
+  font-family: 'Futura PT Book';
   font-weight: 200;
 }
 
@@ -102,9 +109,28 @@ p {
   }
 
   p {
-    margin: 10px 0;
     width: 0;
-    font-size: 0.55rem; 
+    font-size: 90%;
     font-weight: 500;
+  }
+}
+
+
+@media (max-width: 510px) {
+  p {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 455px) {
+  p {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 400px) {
+  p {
+    font-size: 60%;
+    font-weight: 600;
   }
 }

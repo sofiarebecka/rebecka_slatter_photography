@@ -23,7 +23,7 @@
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .image-loop img {
     width: 100vw;
     height: auto;

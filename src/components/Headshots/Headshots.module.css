@@ -39,8 +39,8 @@
   flex-direction: row;
   margin-bottom: 100px;
   justify-content: center;
-  gap: 10px;
-  margin-top: 45px;
+  gap: 2%;
+  margin-top: 0px;
 }
 
 .masonry-column {
@@ -49,24 +49,24 @@
 }
 
 .masonry-column:first-of-type {
-  padding: 200px 0 100px 0;
+  padding: 16% 0 4% 0;
 }
 
 .masonry-column:nth-of-type(2) {
-  padding: 0 0 300px 0;
+  padding: 0 0 22% 0;
 }
 
 .masonry-column:nth-of-type(3) {
-  padding: 120px 0 180px 0;
+  padding: 10% 0 3% 0;
 }
 
 .masonry-column:nth-of-type(4) {
-  padding: 300px 0 0 0;
+  padding: 24% 0 0 0;
 }
 
 .masonry-image {
   width: 100%;
-  margin: 10px 0;
+  margin: 3% 0;
   height: auto;
 }
 
@@ -77,6 +77,12 @@
 .headshot-collection {
   width: 45%;
   margin: -20px 0 100px 0;
+}
+
+@media (max-width: 1000px) {
+  .headshots-title {
+    font-size: 90px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -90,6 +96,9 @@
   }
 
   .masonry-container {
-    margin-top: 270px;
+    margin-top: 170px;
+    &.show-menu {
+      margin-top: 270px;
+    }
   }
 }
