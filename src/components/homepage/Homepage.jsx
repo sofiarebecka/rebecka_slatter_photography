@@ -1,10 +1,10 @@
-import './Homepage.css'
+import style from './Homepage.module.css'
 import React from 'react'
 
 const Homepage = () => {
   return (
-    <div className="main-container">
-      <div className="image-loop">
+    <div className={style["main-container"]}>
+      <div className={style["image-loop"]}>
         <img src="homepage-images/Junior-1.jpg" alt="Fashion photography"/>
         <img src="homepage-images/Percelle-1.jpg" alt="Percelle Ascott"/>
         <img src="homepage-images/Sanchez-1.jpg" alt="Stephen Sanchez"/>
