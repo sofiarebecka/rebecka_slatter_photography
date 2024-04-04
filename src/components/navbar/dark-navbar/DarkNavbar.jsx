@@ -32,7 +32,7 @@ const DarkNavbar = ({showMenu, setShowMenu}) => {
 const NavigationLinks = ({showMenu}) => {
   return (
     <div className={`${style["navigation-links"]} ${showMenu ? style['show-menu'] : ''}`}>
-      <a className={style["navigation-link"]} to='#'>
+      <a className={style["navigation-link"]} href="/pricing">
         Pricing
       </a>
       <a className={style["navigation-link"]} href="https://www.instagram.com/rebeckaslatter/?hl=en">

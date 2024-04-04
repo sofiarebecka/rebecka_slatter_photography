@@ -11,6 +11,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import Pricing from '../pricing/Pricing.jsx';
 
 const App = () => {
 
@@ -19,7 +20,7 @@ const App = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
-    if (location.pathname == "/headshots") {
+    if (location.pathname == "/headshots" || location.pathname == "/pricing") {
       setTheme("dark")
     } else {
       setTheme("light")
@@ -35,6 +36,7 @@ const App = () => {
         <Route path='/work' element={<WorkPage navigate={useNavigate() }/>}/>
         <Route path='/contact' element={<Contacts navigate={useNavigate() }/>}/>
         <Route path='/headshots' element={<Headshots navigate={useNavigate() } showMenu={showMenu}/>}/>
+        <Route path='/pricing' element={<Pricing navigate={useNavigate() } showMenu={showMenu}/>}/>
       </Routes>
     </>
   );
