@@ -4,9 +4,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 400vh;
+  height: auto;
   background: linear-gradient(45deg, rgb(0, 0, 0), rgb(9, 0, 41));
   background-attachment: fixed;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -16,57 +17,77 @@
   color: white;
 }
 
+.info-container {
+  position: relative;
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+  align-items: center; 
+  width: auto;
+  height: auto;
+}
+
 .info-title {
-  font-size: 300%;
+  font-size: 8vh;
   text-align: center;
   padding: 15vh 0 0 0;
   margin-bottom: 5%;
   transition: padding 1s ease-in-out;
 }
 
-.info-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  width: 100%;
-  height: 100%;
-  margin: 10px;
-  border: 1px solid red;
-}
-
-.info-text-container {
-  max-width: 80%;
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
+.info-sub-title {
+  display: inherit;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  h2 {
+    text-align: center;
+    font-size: 6vh;
+    margin: 3vw 0; 
+    width: 100vw;
+  }
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  white-space: normal;
-  margin: 10px 0;
-  font-weight: 200;
-  font-family: 'Futura PT Medium'; 
+.info-image-container img {
+  width: 48vw;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  p {
+    margin: 3vh 0vh 0 2vh;
+    font-size: 1.5vw;
+  }
 }
 
 .typewriter-text {
   display: inline-block;
   font-family: 'Futura PT Book';
+  p {
+    margin-top: 8vh;
+  }
 }
 
 .typewriter-text p {
+  font-size: 2vw;
   animation: typing 2s linear forwards;
-  width: 0;
   overflow: hidden;
   white-space: nowrap;
+  width: 0;
+  font-family: 'Futura PT Medium'; 
 }
 
-.typewriter-text:last-of-type p {
-  animation-duration: 0.5s;
+.rebecka-text {
+  margin: 3vh 0 20vh 0;
+  p {
+    animation-duration: 0.5s;
+  }
 }
 
 @keyframes typing {
@@ -78,135 +99,37 @@ p {
   }
 }
 
-.shift-text-up {
-  opacity: 0;
-  animation: slideUp 1s forwards;
-}
-
-.shift-text-up p {
-  text-align: center;
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-
-
 @media (max-width: 760px) {
   .info-title {
     padding: 20vh 0 0 0;
+    font-size: 6vh;
   }
-}
 
-.info-list {
-  margin: 0 0 5% 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-.info-2-container {
-  margin: 6% 0;
-  display: inherit;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-
-.info-1-image-container {
-  position: absolute;
-  top: -30%; 
-  transform: translateY(-50%);
-  .info-1 {
-    text-align: center;
-  }
-}
-.info-2-image-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-  width: 45%;
-}
-
-.info-2-image-container img {
-  width: 80%; /* Adjust the width as needed */
-  max-width: 100%; /* Ensure the image doesn't exceed its container */
-  border-radius: 0.1em;
-}
-
-
-
-
-.info-1, .info-2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: baseline;
-  align-items: center;
-  width: 55%;
-  ul {
-    margin: 5vh 2vw 0 2vw;
-    li {
-      margin: 2% 0;
-      font-size: 2vw;
+  .info {
+    width: 75%;
+    p {
+      font-size: 3vw;
     }
   }
-}
 
-.info-1 {
-  p {
-    margin: 5vh 0vh 0 2vh;
-    font-size: 2vw;
+  .info-image-container img {
+    width: 80vw;
   }
 }
 
-.info-2 {
-  align-items: center;
-}
+@media (max-width: 500px) {
+  .info-title {
+    font-size: 4vh;
+  }
 
+  .info {
+    width: 95%;
+    p {
+      font-size: 3.5vw;
+    }
+  }
 
-
-
-.info-1-title,
-.info-2-title {
-  display: inherit;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-
-.info-1-title h2,
-.info-2-title h2 {
-  text-align: center;
-  font-size: 4vw;
-  margin: 2vw 0; 
-}
-
-.info-1-title h3,
-.info-2-title h3 {
-  text-align: center;
-  font-size: 3vw; 
-  margin: 0; 
-}
-
-
-.info-footer {
-  height: 250px;
-  width: 67%;
-  border: 20px solid pink;
-  text-align: center;
-  margin: auto;
+  .info-image-container img {
+    width: 100vw;
+  }
 }

@@ -5,14 +5,14 @@ import WorkPage from '../work/WorkPage.jsx';
 import Navbar from '../navbar/Navbar.jsx';
 import Contacts from '../contacts/Contacts.jsx';
 import Headshots from '../headshots/Headshots.jsx';
+import Pricing from '../pricing/Pricing.jsx';
+import Info from '../info/Info.jsx';
 import {
   useNavigate,
   Routes,
   Route,
   useLocation,
 } from "react-router-dom";
-import Pricing from '../pricing/Pricing.jsx';
-import Info from '../info/info.jsx';
 
 const App = () => {
 
