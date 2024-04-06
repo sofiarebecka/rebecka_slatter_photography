@@ -32,17 +32,25 @@ const DarkNavbar = ({showMenu, setShowMenu}) => {
 const NavigationLinks = ({showMenu}) => {
   return (
     <div className={`${style["navigation-links"]} ${showMenu ? style['show-menu'] : ''}`}>
+      <a className={style["navigation-link"]} href="/info">
+        INFO
+      </a>
+      <a className={style["navigation-link"]} href="/headshots">
+        HEADSHOTS
+      </a>
       <a className={style["navigation-link"]} href="/pricing">
-        Pricing
+        PACKAGES
       </a>
       <a className={style["navigation-link"]} href="https://www.instagram.com/rebeckaslatter/?hl=en">
         <img style={{width: 29}} src="logos/instagram_icon_white.png" alt="instagram logo white" />
       </a>
+      
+      <a className={style["navigation-link"]} href={`mailto:${"rebecka@rebeckaslatter.com"}`}>
+        <img style={{width: 37}} src="logos/email-icon-white-1.png" alt="email logo white" />
+      </a>
+      
       <a className={style["navigation-link"]} href="https://www.linkedin.com/in/rebecka-slatter-b28103136/">
         <img style={{width: 32}} src="logos/linkedin_icon_white.png" alt="linkedin logo white" />
-      </a>
-      <a className={style["navigation-link"]} href={`mailto:${"rebecka@rebeckaslatter.com"}`}>
-        <img style={{width: 37}} src="logos/email_icon_white.png" alt="email logo white" />
       </a>
     </div>
   )

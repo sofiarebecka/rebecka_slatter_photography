@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 180vh;
+  height: 500vh;
   background: linear-gradient(45deg, rgb(0, 0, 0), rgb(9, 0, 41));
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -50,6 +50,12 @@
   justify-content: flex-end;
 }
 
+.pricing-3-container {
+  display: inherit;
+  flex-direction: row;
+  height: 50%;
+}
+
 .pricing-1-image-container {
   display: flex;
   flex-direction: column;
@@ -75,8 +81,21 @@
     border-radius: 0.1em;
   }
 }
+.pricing-3-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  padding: 0vh 0;
+  width: 45%;
+  img {
+    width: 80%;
+    border-radius: 0.1em;
+  }
+}
 
-.pricing-1, .pricing-2 {
+
+.pricing-1, .pricing-2, .pricing-3 {
   display: flex;
   flex-direction: column;
   justify-content: baseline;
@@ -102,24 +121,55 @@
   align-items: center;
 }
 
-.pricing-1-title, .pricing-2-title {
+.pricing-3 {
+  p {
+    margin: 5vh 0vh 0 2vh;
+    font-size: 2vw;
+  }
+}
+
+.pricing-1-title,
+.pricing-2-title,
+.pricing-3-title {
   display: inherit;
   flex-direction: column;
   justify-content: center;
-  h2 {
-    text-align: center;
-    font-size: 3.2vw;
-    margin: 2vw 0;
-  }
-
-  h3 {
-    text-align: center;
-    font-size: 2.2vw;
-    margin: 0;
-  } 
+  align-items: center; /* Aligning titles center horizontally */
+  text-align: center; /* Centering text within the container */
 }
 
+.pricing-1-title h2,
+.pricing-2-title h2,
+.pricing-3-title h2 {
+  text-align: center;
+  font-size: 4vw; /* Adjust the font size to your preference */
+  margin: 2vw 0; /* Adjust the margin if needed */
+}
+
+.pricing-1-title h3,
+.pricing-2-title h3,
+.pricing-3-title h3 {
+  text-align: center;
+  font-size: 3vw; /* Adjust the font size to your preference */
+  margin: 0; /* Adjust the margin if needed */
+}
+
+
 .pricing-footer {
-  height: 100px;
-  border: 1px solid pink;
-} 
+  height: auto; /* Remove fixed height to allow content to adjust height */
+  width: 90%; /* Adjust the width to fit smaller screens */
+  border: 0px solid pink;
+  text-align: center; 
+  margin: 20px auto; /* Add margin for better spacing */
+  padding: 20px; /* Add padding for better spacing */
+  font-size: 16px; /* Adjust the font size for better readability on mobile */
+}
+
+@media (max-width: 768px) {
+  .pricing-footer {
+    font-size: 14px; /* Further adjust font size for smaller screens */
+    margin: 10px auto; /* Adjust margin for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+  
