@@ -73,13 +73,13 @@
 }
 
 .navigation-links {
-  margin-right: 110px;
+  margin-right: 50px;
   width: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 9%;
+  gap: 50px;
 }
 
 .navbar-title {
@@ -124,7 +124,7 @@
 
   .show-menu {
     &.nav-container {
-      height: 270px;
+      height: 220px;
     }
 
     &.navigation-links {
@@ -132,7 +132,8 @@
       flex-direction: column;
       position: absolute;
       top: 75px;
-      right: -50px;
+      right: 3%;
+      gap: 6%;
       margin-top: 5px;
       border-radius: 15px;
     }

@@ -46,8 +46,8 @@ const NavigationLinks = ({showMenu}) => {
       <a className={style["navigation-link"]} href="/pricing">
         PACKAGES
       </a>
-      <a className={style["navigation-link"]} href="/info">
-        INFO
+      <a className={style["navigation-link"]} href="/headshot-about">
+        ABOUT
       </a>
       <a className={style["navigation-link"]} href="/headshot-contacts">
         CONTACT

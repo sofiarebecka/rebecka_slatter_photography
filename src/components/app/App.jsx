@@ -6,7 +6,7 @@ import Navbar from '../navbar/Navbar.jsx';
 import Contacts from '../contacts/Contacts.jsx';
 import Headshots from '../headshots/Headshots.jsx';
 import Pricing from '../pricing/Pricing.jsx';
-import Info from '../info/Info.jsx';
+import HeadshotsAbout from '../headshotsAbout/HeadshotsAbout.jsx';
 import DarkContacts from '../darkContacts/DarkContacts.jsx';
 import {
   useNavigate,
@@ -20,7 +20,7 @@ const App = () => {
   const location = useLocation();
   const [theme, setTheme] = useState("light");
   const [showMenu, setShowMenu] = useState(false);
-  const headshotsPathnames = ["/headshots", "/pricing", "/info", "/headshot-contacts"]
+  const headshotsPathnames = ["/headshots", "/pricing", "/headshot-about", "/headshot-contacts"]
 
   useEffect(() => {
     if (headshotsPathnames.includes(location.pathname)) {
@@ -43,7 +43,7 @@ const App = () => {
         {/* HEADSHOTS PAGE */}
         <Route path='/headshots' element={<Headshots navigate={useNavigate()} showMenu={showMenu} />} />
         <Route path='/pricing' element={<Pricing navigate={useNavigate()} showMenu={showMenu} />} />
-        <Route path='/info' element={<Info navigate={useNavigate()} showMenu={showMenu} />} />
+        <Route path='/headshot-about' element={<HeadshotsAbout navigate={useNavigate()} showMenu={showMenu} />} />
         <Route path='/headshot-contacts' element={<DarkContacts navigate={useNavigate()} />} />
       </Routes>
     </>

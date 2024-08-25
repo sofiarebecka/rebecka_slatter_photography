@@ -1,7 +1,7 @@
 import React from "react";
-import style from "./Info.module.css"
+import style from "./HeadshotsAbout.module.css"
 
-const Info = () => {
+const HeadshotsAbout = () => {
   document.querySelector('html').style.setProperty("background-color", "rgb(3, 0, 23)");
 
   return (
@@ -32,4 +32,4 @@ const Info = () => {
 }
 
 
-export default Info;
+export default HeadshotsAbout;
