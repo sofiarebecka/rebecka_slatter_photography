@@ -60,7 +60,6 @@ const Pricing = () => {
               <li>Ten retouched images</li>
               <li>Online gallery available within 48 hours</li>
             </ul>
-            <p>This package is great if you need to build a model portfolio.</p>
             {/* <p></p><p></p>*sharable with private link */}
           </div>
         </div>
