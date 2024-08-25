@@ -2,6 +2,8 @@ import style from './Homepage.module.css'
 import React from 'react'
 
 const Homepage = () => {
+  document.querySelector('html').style.setProperty("background-color", "white");
+
   return (
     <div className={style["no-scroll"]}>
       <div className={style["main-container"]}>

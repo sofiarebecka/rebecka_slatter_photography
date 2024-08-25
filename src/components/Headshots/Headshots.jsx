@@ -2,6 +2,8 @@ import style from './Headshots.module.css';
 import React from 'react'
 
 const Headshots = ({showMenu}) => {
+  document.querySelector('html').style.setProperty("background-color", "rgb(3, 0, 23)");
+
   return (
     <div className={style["page-container"]}>
       <h1 className={style["headshots-title"]}>HEADSHOTS</h1>

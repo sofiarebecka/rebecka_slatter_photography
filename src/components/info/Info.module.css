@@ -50,7 +50,7 @@
 }
 
 .info-image-container img {
-  width: 48vw;
+  width: 100%;
 }
 
 .info {
@@ -80,6 +80,7 @@
   overflow: hidden;
   white-space: nowrap;
   width: 0;
+  margin-left: 0;
   font-family: 'Futura PT Medium'; 
 }
 
@@ -87,6 +88,7 @@
   margin: 3vh 0 20vh 0;
   p {
     animation-duration: 0.5s;
+    margin-left: 0;
   }
 }
 
@@ -113,7 +115,7 @@
   }
 
   .info-image-container img {
-    width: 80vw;
+    margin-top: 148px;
   }
 }
 

@@ -2,12 +2,14 @@ import React from "react";
 import style from "./Info.module.css"
 
 const Info = () => {
+  document.querySelector('html').style.setProperty("background-color", "rgb(3, 0, 23)");
+
   return (
     <div className={style["info-page-container"]}>
       <div className={style["info-container"]}>
-        <h1 className={style["info-title"]}>1,2, 3, Ready, SHOOT!</h1>
+        {/* <h1 className={style["info-title"]}>1,2, 3, Ready, SHOOT!</h1> */}
         <div className={style["info-image-container"]}>
-          <img src="/babybecka.jpg" alt="Photographer" />
+          <img src="/rebecka.jpg" alt="Photographer" />
         </div>
         <div className={style["info"]}>
           <div className={style["info-sub-title"]}>

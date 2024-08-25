@@ -2,10 +2,20 @@ import style from './LightNavbar.module.css'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const LightNavbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+const LightNavbar = ({showMenu, setShowMenu}) => {
 
-  const toggleMenu = () => {
+  const [isTouch, setIsTouch] = useState(false);
+
+  const handleTouchStart = () => {
+    setIsTouch(true);
+    setShowMenu(!showMenu);
+  };
+
+  const handleClick = () => {
+    if (isTouch) {
+      setIsTouch(false);
+      return;
+    }
     setShowMenu(!showMenu);
   };
 
@@ -16,7 +26,7 @@ const LightNavbar = () => {
           <img className={style["nav-logo"]} src="logos/rebecka_logo.png" alt="Rebecka Slatter Photography" />
         </Link>
           <div className={`${style["mobile-menu"]} ${showMenu ? style['show-menu'] : ''}`}>
-            <div className={style["menu-icon"]} onClick={toggleMenu}>
+            <div className={style["menu-icon"]} onClick={handleClick} onTouchStart={handleTouchStart}>
               <div className={style["bar"]}></div>
               <div className={style["bar"]}></div>
               <div className={style["bar"]}></div>
@@ -33,13 +43,13 @@ const NavigationLinks = ({showMenu}) => {
   return (
     <div className={`${style["navigation-links"]} ${showMenu ? style['show-menu'] : ''}`}>
       <Link className={style["navigation-link"]} to="/work">
-        Work
+        WORK
       </Link>
       <Link className={style["navigation-link"]} to="/about">
-        About
+        ABOUT
       </Link>
       <Link className={style["navigation-link"]} to="/contact">
-        Contact
+        CONTACT
       </Link>
     </div>
   )

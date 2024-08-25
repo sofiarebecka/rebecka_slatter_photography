@@ -2,9 +2,11 @@ import React from "react";
 import style from "./Pricing.module.css"
 
 const Pricing = () => {
+  document.querySelector('html').style.setProperty("background-color", "rgb(3, 0, 23)");
+
   return (
     <div className={style["pricing-page-container"]}>
-      <h1 className={style["pricing-title"]}>I offer these packages: </h1>
+      <h1 className={style["pricing-title"]}>Choose your experience: </h1>
       <div className={style["pricing-list"]}>
         <div className={style["pricing-1-container"]}>
           <div className={style["pricing-1-image-container"]}>
@@ -63,19 +65,17 @@ const Pricing = () => {
           </div>
         </div>
         <div className={style["pricing-footer"]}>
-        
-<p></p>
-After the session you will be sent a password protected online gallery with the images to select your favourites or to share  the link with your agent.
-<br></br>The images of your choosing will be delivered to your email once they have been slightly retouched to enhance your own natural beauty.
-<p></p>
-You have the option to choose more images for £30 per image.
-<p></p>
-
-If you would require more time and several outfit changes there will be an extra fee.
-<br></br>Makeup artist and stylist are available on requruest at an added charge.
-<br></br><br></br>
-The gallery will be saved for 6 months in case you choose to order more images in the future.
-
+          <h4>Additional information</h4>
+          <p>After our session, you will receive access to a password-protected online gallery containing the images.</p>
+          <p>You can use this gallery to select your favorite images or share the link with your agent.</p>
+          <br></br>
+          <p>The images you choose will be delivered to your email after they have been lightly retouched to enhance your natural beauty.</p>
+          <p>You also have the option to select additional images at a cost of £30 per image.</p>
+          <br></br>
+          <p>If you require more time or want to incorporate several outfit changes, there will be an extra fee.</p>
+          <p>Additionally, a makeup artist and stylist are available upon request for an added charge.</p>
+          <br></br>
+          <p>The gallery will be saved for 6 months in case you decide to order more images in the future.</p>
         </div>
       </div>
     </div>

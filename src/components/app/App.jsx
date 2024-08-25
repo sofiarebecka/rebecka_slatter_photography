@@ -7,6 +7,7 @@ import Contacts from '../contacts/Contacts.jsx';
 import Headshots from '../headshots/Headshots.jsx';
 import Pricing from '../pricing/Pricing.jsx';
 import Info from '../info/Info.jsx';
+import DarkContacts from '../darkContacts/DarkContacts.jsx';
 import {
   useNavigate,
   Routes,
@@ -19,26 +20,31 @@ const App = () => {
   const location = useLocation();
   const [theme, setTheme] = useState("light");
   const [showMenu, setShowMenu] = useState(false);
+  const headshotsPathnames = ["/headshots", "/pricing", "/info", "/headshot-contacts"]
 
   useEffect(() => {
-    if (location.pathname == "/headshots" || location.pathname == "/pricing" || location.pathname == "/info") {
-      setTheme("dark")
+    if (headshotsPathnames.includes(location.pathname)) {
+      setTheme("dark");
     } else {
-      setTheme("light")
+      setTheme("light");
     }
-  }, [location.pathname])
+
+    setShowMenu(false);
+  }, [location.pathname]);
 
   return (
     <>
       <Navbar theme={theme} showMenu={showMenu} setShowMenu={setShowMenu} />
       <Routes>
-        <Route path='/' element={<Homepage navigate={useNavigate() }/>}/>
-        <Route path='/about' element={<AboutPage navigate={useNavigate() }/>}/>
-        <Route path='/work' element={<WorkPage navigate={useNavigate() }/>}/>
-        <Route path='/contact' element={<Contacts navigate={useNavigate() }/>}/>
-        <Route path='/headshots' element={<Headshots navigate={useNavigate() } showMenu={showMenu}/>}/>
-        <Route path='/pricing' element={<Pricing navigate={useNavigate() } showMenu={showMenu}/>}/>
-        <Route path='/info' element={<Info navigate={useNavigate() } showMenu={showMenu}/>}/>
+        <Route path='/' element={<Homepage navigate={useNavigate()} />} />
+        <Route path='/about' element={<AboutPage navigate={useNavigate()} />} />
+        <Route path='/work' element={<WorkPage navigate={useNavigate()} />} />
+        <Route path='/contact' element={<Contacts navigate={useNavigate()} />} />
+        {/* HEADSHOTS PAGE */}
+        <Route path='/headshots' element={<Headshots navigate={useNavigate()} showMenu={showMenu} />} />
+        <Route path='/pricing' element={<Pricing navigate={useNavigate()} showMenu={showMenu} />} />
+        <Route path='/info' element={<Info navigate={useNavigate()} showMenu={showMenu} />} />
+        <Route path='/headshot-contacts' element={<DarkContacts navigate={useNavigate()} />} />
       </Routes>
     </>
   );

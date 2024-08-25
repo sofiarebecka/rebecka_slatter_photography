@@ -1,10 +1,21 @@
 import style from './DarkNavbar.module.css'
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const DarkNavbar = ({showMenu, setShowMenu}) => {
 
-  const toggleMenu = () => {
+  const [isTouch, setIsTouch] = useState(false);
+
+  const handleTouchStart = () => {
+    setIsTouch(true);
+    setShowMenu(!showMenu);
+  };
+
+  const handleClick = () => {
+    if (isTouch) {
+      setIsTouch(false);
+      return;
+    }
     setShowMenu(!showMenu);
   };
 
@@ -16,7 +27,7 @@ const DarkNavbar = ({showMenu, setShowMenu}) => {
         </Link>
         <h1 className={style["navbar-title"]}>HEADSHOTS</h1>
           <div className={`${style['mobile-menu']} ${showMenu? style['show-menu'] : ""}`} >
-            <div className={style["menu-icon"]} onClick={toggleMenu}>
+            <div className={style["menu-icon"]} onClick={handleClick} onTouchStart={handleTouchStart}>
               <div className={style["bar"]}></div>
               <div className={style["bar"]}></div>
               <div className={style["bar"]}></div>
@@ -32,25 +43,14 @@ const DarkNavbar = ({showMenu, setShowMenu}) => {
 const NavigationLinks = ({showMenu}) => {
   return (
     <div className={`${style["navigation-links"]} ${showMenu ? style['show-menu'] : ''}`}>
-      <a className={style["navigation-link"]} href="/info">
-        INFO
-      </a>
-      <a className={style["navigation-link"]} href="/headshots">
-        HEADSHOTS
-      </a>
       <a className={style["navigation-link"]} href="/pricing">
         PACKAGES
       </a>
-      <a className={style["navigation-link"]} href="https://www.instagram.com/rebeckaslatter/?hl=en">
-        <img style={{width: 29}} src="logos/instagram_icon_white.png" alt="instagram logo white" />
+      <a className={style["navigation-link"]} href="/info">
+        INFO
       </a>
-      
-      <a className={style["navigation-link"]} href={`mailto:${"rebecka@rebeckaslatter.com"}`}>
-        <img style={{width: 37}} src="logos/email-icon-white-1.png" alt="email logo white" />
-      </a>
-      
-      <a className={style["navigation-link"]} href="https://www.linkedin.com/in/rebecka-slatter-b28103136/">
-        <img style={{width: 32}} src="logos/linkedin_icon_white.png" alt="linkedin logo white" />
+      <a className={style["navigation-link"]} href="/headshot-contacts">
+        CONTACT
       </a>
     </div>
   )

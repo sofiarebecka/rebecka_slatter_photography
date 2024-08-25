@@ -2,6 +2,8 @@ import React from 'react';
 import style from './Contacts.module.css'
 
 const Contacts = () => {
+  document.querySelector('html').style.setProperty("background-color", "white");
+
   return (
     <><br/><br/><br/><br/>
       <div className={style["flex-container"]}>
