@@ -23,7 +23,7 @@ const Pricing = () => {
               <li>Three retouched images</li>
               <li>Online gallery available within 48 hours</li>
             </ul>
-           {/*    <p></p>*sharable with private link */}
+           {/* <p></p>*sharable with private link */}
           </div>
         </div>
         <div className={style["pricing-2-container"]}>
@@ -61,7 +61,7 @@ const Pricing = () => {
               <li>Online gallery available within 48 hours</li>
             </ul>
             <p>This package is great if you need to build a model portfolio.</p>
-      {/*   <p></p><p></p>*sharable with private link */}
+            {/* <p></p><p></p>*sharable with private link */}
           </div>
         </div>
         <div className={style["pricing-footer"]}>
