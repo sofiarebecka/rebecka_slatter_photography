@@ -21,10 +21,11 @@
   }
 }
 
-.width-section {
+/* .width-section {
   height: 295px;
+  z-index: 50;
   background-color: transparent;
-}
+} */
 
 .navigation-link {
   height: 20px;

@@ -1,3 +1,9 @@
+.background-image {
+  width: 100%;
+  position: fixed;
+  z-index: -100;
+}
+
 .info-page-container {
   position: absolute;
   z-index: -1;
@@ -51,6 +57,7 @@
 
 .info-image-container img {
   width: 100%;
+  border: 2px solid black;
 }
 
 .info {

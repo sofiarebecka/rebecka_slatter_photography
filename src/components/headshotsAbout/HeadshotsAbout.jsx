@@ -2,10 +2,11 @@ import React from "react";
 import style from "./HeadshotsAbout.module.css"
 
 const HeadshotsAbout = () => {
-  document.querySelector('html').style.setProperty("background-color", "rgb(3, 0, 23)");
+  document.querySelector("html").style.setProperty("background-color", "rgb(0, 0, 0)");
 
   return (
     <div className={style["info-page-container"]}>
+      <img src="background7.jpg" className={style['background-image']}/>
       <div className={style["info-container"]}>
         {/* <h1 className={style["info-title"]}>1,2, 3, Ready, SHOOT!</h1> */}
         <div className={style["info-image-container"]}>
@@ -16,9 +17,8 @@ const HeadshotsAbout = () => {
             <h2>Rebecka Slatter</h2>
           </div>
           <p>Hi there!</p> 
-          <p>I bring years of expertise to every shoot, ensuring that your headshots are stunning, authentic and professional. I work with established actors, performers and artists and I am looking forward to working with you too! In the picture above I was 15 years old, studying photography at what we call "Gymnasiet" in Sweden.</p>
-          <p>10 years later I was living in London and had kick-started my career as a photography assistant in the fashion industy. Now I am lucky enough to be working full-time as a photographer with my own home studio in North London.</p>
-          <p>I am so grateful for the people I have met during this journey. Thank you for trusting me and my creative vision to capture your most intimate self.</p>
+          <p>I bring years of expertise to every shoot, ensuring that your headshots are stunning, authentic and professional. I work with established actors, performers and artists and I am looking forward to working with you too!</p>  
+          <p>Thank you for trusting me and my creative vision to capture your most intimate self.</p>
           <div className={style["typewriter-text"]}>
             <p style={{ animationDelay: "2s" }}>Don't be shy, get in touch and book a session with me.</p>
           </div>

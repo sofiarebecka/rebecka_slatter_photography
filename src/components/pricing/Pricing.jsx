@@ -2,10 +2,10 @@ import React from "react";
 import style from "./Pricing.module.css"
 
 const Pricing = () => {
-  document.querySelector('html').style.setProperty("background-color", "rgb(3, 0, 23)");
 
   return (
     <div className={style["pricing-page-container"]}>
+      <img src="background7.jpg" className={style['background-image']}/>
       <h1 className={style["pricing-title"]}>Choose your experience: </h1>
       <div className={style["pricing-list"]}>
         <div className={style["pricing-1-container"]}>

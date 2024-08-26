@@ -1,8 +1,14 @@
-/* Default styles for larger screens */
+.background-image {
+  width: 100%;
+  position: fixed;
+  z-index: -100;
+}
+
 .flex-container {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-top: 250px;
 }
 
 .linkedin {

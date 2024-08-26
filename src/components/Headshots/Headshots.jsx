@@ -2,7 +2,6 @@ import style from './Headshots.module.css';
 import React, { useEffect, useState } from 'react'
 
 const Headshots = ({showMenu}) => {
-  document.querySelector('html').style.setProperty("background-color", "rgb(3, 0, 23)");
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [imageToDisplay, setImageToDisplay] = useState(null);
@@ -82,7 +81,6 @@ const Headshots = ({showMenu}) => {
         handleArrowForwardClick(event);
         break;
       case 'Escape':
-        // event.stopPropagation();
         setIsModalOpen(!isModalOpen)
       default:
         break;
@@ -93,9 +91,8 @@ const Headshots = ({showMenu}) => {
     if (isModalOpen) {
       window.addEventListener('keydown', handleKeyDown);
       document.querySelector("nav").style.setProperty("z-index", "-1");
-      // console.log(document.querySelector("nav"));
     } else {
-      document.querySelector("nav").style.setProperty("z-index", "100");
+      document.querySelector("nav").style.setProperty("z-index", "999");
     }
 
     return () => {
@@ -105,6 +102,7 @@ const Headshots = ({showMenu}) => {
 
   return (
     <div className={style["page-container"]}>
+      <img src="background7.jpg" className={style['background-image']}/>
       <h1 className={style["headshots-title"]}>HEADSHOTS</h1>
       <div className={`${style["masonry-container"]} ${showMenu? style["show-menu"] : ""}`}>
         <div className={style["masonry-column"]}>
