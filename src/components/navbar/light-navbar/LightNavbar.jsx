@@ -1,32 +1,16 @@
 import style from './LightNavbar.module.css'
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const LightNavbar = ({showMenu, setShowMenu}) => {
-
-  const [isTouch, setIsTouch] = useState(false);
-
-  const handleTouchStart = () => {
-    setIsTouch(true);
-    setShowMenu(!showMenu);
-  };
-
-  const handleClick = () => {
-    if (isTouch) {
-      setIsTouch(false);
-      return;
-    }
-    setShowMenu(!showMenu);
-  };
-
   return (
     <>
-      <nav className={`${style["nav-container"]} ${showMenu ? style['show-menu'] : ''}`}>
+      <nav className={`${style["nav-container"]} ${showMenu && style['show-menu']}`}>
         <Link to="/">
           <img className={style["nav-logo"]} src="logos/rebecka_logo.png" alt="Rebecka Slatter Photography" />
         </Link>
-          <div className={`${style["mobile-menu"]} ${showMenu ? style['show-menu'] : ''}`}>
-            <div className={style["menu-icon"]} onClick={handleClick} onTouchStart={handleTouchStart}>
+          <div className={`${style["mobile-menu"]} ${showMenu && style['show-menu']}`}>
+            <div className={style["menu-icon"]} onClick={() => setShowMenu(!showMenu)}>
               <div className={style["bar"]}></div>
               <div className={style["bar"]}></div>
               <div className={style["bar"]}></div>
@@ -34,14 +18,14 @@ const LightNavbar = ({showMenu, setShowMenu}) => {
             <NavigationLinks showMenu={showMenu}/>
           </div>
       </nav>
-      <div className={`${style["width-section"]} ${showMenu ? style['show-menu'] : ''}`}></div>
+      <div className={`${style["width-section"]} ${showMenu && style['show-menu']}`}></div>
     </>
   );
 }
 
 const NavigationLinks = ({showMenu}) => {
   return (
-    <div className={`${style["navigation-links"]} ${showMenu ? style['show-menu'] : ''}`}>
+    <div className={`${style["navigation-links"]} ${showMenu && style['show-menu']}`}>
       <Link className={style["navigation-link"]} to="/work">
         WORK
       </Link>
