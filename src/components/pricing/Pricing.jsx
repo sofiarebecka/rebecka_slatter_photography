@@ -39,7 +39,7 @@ const Pricing = () => {
 
         <div className={`${style["pricing-1-container"]} ${style["slide-up"]}`}>
           <div className={style["pricing-1-image-container"]}>
-            <img src="pricing-images/Alice-3-2.jpg"></img>
+            <img src="pricing-images/Francesco-1.jpg"></img>
           </div>
           <div className={style["pricing-1"]}>
             <div className={style["pricing-1-title"]}>
