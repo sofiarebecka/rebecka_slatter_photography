@@ -29,13 +29,12 @@ const Headshots = ({showMenu}) => {
     "Benson-1.jpg"
   ]
 
-  function handleImageClick(index) {
+  function handleImageClick(index, number) {
     setIsModalOpen(!isModalOpen);
-    setImageToDisplay(index);
+    setImageToDisplay(index + number);
   }
 
   function handleArrowBackClick(event) {
-    console.log(event)
     event.stopPropagation()
     if (imageToDisplay <= 0) {
       setVisible("")
@@ -53,7 +52,6 @@ const Headshots = ({showMenu}) => {
   }
 
   function handleArrowForwardClick(event) {
-    console.log(event)
     event.stopPropagation()
     if (imageToDisplay >= imageFiles.length - 1) {
       setVisible("")
@@ -106,42 +104,42 @@ const Headshots = ({showMenu}) => {
       <h1 className={style["headshots-title"]}>HEADSHOTS</h1>
       <div className={`${style["masonry-container"]} ${showMenu? style["show-menu"] : ""}`}>
         <div className={style["masonry-column"]}>
-          {imageFiles.slice(0, 3).map((image, index) => (
+          {imageFiles.slice(0, 4).map((image, index) => (
             <img 
               className={style["masonry-image"]} 
               key={index}
               src={`headshots-images/${image}`} 
-              onClick={() => handleImageClick(index)}
+              onClick={() => handleImageClick(index, 0)}
             />
           ))}
         </div>
         <div className={style["masonry-column"]}>
-          {imageFiles.slice(4, 7).map((image, index) => (
+          {imageFiles.slice(4, 8).map((image, index) => (
             <img 
               className={style["masonry-image"]} 
               key={index}
               src={`headshots-images/${image}`} 
-              onClick={() => handleImageClick(index)}
+              onClick={() => handleImageClick(index, 4)}
             />
           ))}
         </div>
         <div className={style["masonry-column"]}>
-          {imageFiles.slice(8, 11).map((image, index) => (
+          {imageFiles.slice(8, 12).map((image, index) => (
             <img 
               className={style["masonry-image"]} 
               key={index}
               src={`headshots-images/${image}`} 
-              onClick={() => handleImageClick(index)}
+              onClick={() => handleImageClick(index, 8)}
             />
           ))}
         </div>
         <div className={style["masonry-column"]}>
-          {imageFiles.slice(12, 15).map((image, index) => (
+          {imageFiles.slice(12, 16).map((image, index) => (
             <img 
               className={style["masonry-image"]} 
               key={index}
               src={`headshots-images/${image}`} 
-              onClick={() => handleImageClick(index)}
+              onClick={() => handleImageClick(index, 12)}
             />
           ))}
         </div>
