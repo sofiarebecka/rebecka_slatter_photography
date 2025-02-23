@@ -33,9 +33,9 @@ const NavigationLinks = ({showMenu}) => {
       <a className={style["navigation-link"]} href="/headshot-about">
         ABOUT
       </a>
-      <a className={style["navigation-link"]} href="/headshot-contacts">
+      {/* <a className={style["navigation-link"]} href="/headshot-contacts">
         CONTACT
-      </a>
+      </a> */}
     </div>
   )
 }

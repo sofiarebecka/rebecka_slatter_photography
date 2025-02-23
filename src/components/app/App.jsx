@@ -14,6 +14,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import Footer from '../footer/Footer.jsx';
 
 const App = () => {
 
@@ -46,6 +47,7 @@ const App = () => {
         <Route path='/headshot-about' element={<HeadshotsAbout navigate={useNavigate()} showMenu={showMenu} />} />
         <Route path='/headshot-contacts' element={<DarkContacts navigate={useNavigate()} />} />
       </Routes>
+      <Footer theme={theme} />
     </>
   );
 }
