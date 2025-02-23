@@ -32,9 +32,9 @@ const NavigationLinks = ({showMenu}) => {
       <Link className={style["navigation-link"]} to="/about">
         ABOUT
       </Link>
-      <Link className={style["navigation-link"]} to="/contact">
+      {/* <Link className={style["navigation-link"]} to="/contact">
         CONTACT
-      </Link>
+      </Link> */}
     </div>
   )
 }
