@@ -8,16 +8,7 @@ footer {
   flex-direction: row;
   align-items: center;
   margin: 2vh auto 2vh auto;
-  /* bottom: 2px;
-  right: 45vw; */
   border-radius: 20px;
-}
-
-.pos-absolute {
-  /* position: absolute; */
-}
-
-.pos-relative {
   position: relative;
 }
 
@@ -32,5 +23,12 @@ footer {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.dark {
+  border-color: white;
+  i {
+    color: white;
   }
 }
